@@ -39,7 +39,7 @@
   @apply flex flex-col items-start gap-3;
 }
 .textarea-body {
-  @apply bg-transparent focus:ring-0 text-sm w-full max-h-20 h-20 overflow-hidden cursor-pointer;
+  @apply bg-transparent focus:ring-0 text-sm w-full max-h-28 h-28 overflow-hidden cursor-pointer;
 }
 
 /* homepage */
@@ -47,13 +47,13 @@
   @apply h-full w-full mx-auto mt-10 px-2 grid gap-2 grid-cols-2 md:grid-cols-3 place-content-center grid-flow-row-dense;
 }
 .todos-contaier {
-  @apply grid p-2 border border-dark0 rounded-md max-h-36 overflow-y-auto overflow-hidden;
+  @apply grid p-2 border border-dark0 rounded-md max-h-44 h-44 overflow-y-auto overflow-hidden;
 }
 .todos-item {
   @apply p-1 grid 
 }
 .notes-item {
-  @apply p-2 rounded-md grid gap-3 overflow-hidden;
+  @apply p-2 rounded-md grid gap-3 
 }
 .btn-add-container {
   @apply w-full flex justify-end mt-5 relative;

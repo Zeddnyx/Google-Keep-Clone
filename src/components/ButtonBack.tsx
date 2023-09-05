@@ -1,12 +1,14 @@
-import {useNavigate} from "react-router-dom"
-import { IoArrowBackSharp } from "react-icons/io5"
+import { useNavigate } from "react-router-dom";
+import { IoArrowBackSharp } from "react-icons/io5";
 
- export default function ButtonBack() {
-   const navigate  = useNavigate()
-   const handleBack = () => {
-     navigate("/")
-   }
+export default function ButtonBack() {
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate("/");
+  };
   return (
-  <button onClick={handleBack} className="mb-5"><IoArrowBackSharp size={20}/></button>
-  )
+    <button onClick={handleBack} className="my-6">
+      <IoArrowBackSharp size={20} />
+    </button>
+  );
 }
