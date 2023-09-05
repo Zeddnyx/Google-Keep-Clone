@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-light0 text-dark0 px-2;
+  }
+  h2 {
+    @apply text-lg md:text-xl font-bold capitalize;
+  }
+  h3 {
+    @apply text-base md:text-lg font-bold capitalize;
+  }
+  p {
+    @apply text-sm md:text-base;
+  }
+}
+
+.dark {
+  @apply bg-dark0 text-light0;
+}
+.dark-border {
+  @apply border border-light0;
+}
+
+/* global style */
+.flexCenterCenter {
+  @apply flex justify-center items-center;
+}
+.flexBetweenCenter {
+  @apply flex justify-between items-center gap-3;
+}
+.flexColStart {
+  @apply flex flex-col items-start gap-3;
+}
+.textarea-body {
+  @apply bg-transparent focus:ring-0 text-sm w-full max-h-20 h-20 overflow-hidden cursor-pointer;
+}
+
+/* homepage */
+.container {
+  @apply h-full w-full mx-auto mt-10 grid gap-2 grid-cols-2 md:grid-cols-3 place-content-center grid-flow-row-dense;
+}
+.todos-contaier {
+  @apply grid p-2 border border-dark0 rounded-md max-h-36 overflow-y-auto overflow-hidden;
+}
+.todos-item {
+  @apply p-1 grid 
+}
+.notes-item {
+  @apply p-2 rounded-md grid gap-3 overflow-hidden;
+}
+.btn-add-container {
+  @apply w-full flex justify-end mt-5 relative;
+}
+.btn-add-self {
+  @apply transition-all ease-in  h-12 w-12 md:h-14 md:w-14 bg-light0 rounded-md flex justify-center items-center text-dark0 fixed right-5 bottom-10 shadow-lg
+  hover:rotate-90  hover:text-yellow;
+}
+
+/* notes  */
+.menu-bottom {
+  @apply flexBetweenCenter w-full p-2 fixed bottom-0 left-0 bg-light0;
+}
+.menu-bottom-colors {
+  @apply w-7 h-7 border rounded-full cursor-pointer hover:opacity-100  outline-none;
+}
+
+.btn-saved {
+  @apply transition-all ease-in  h-12 w-12 md:h-14 md:w-14 bg-light0 rounded-md flex justify-center items-center text-dark0 shadow-lg
+  hover:text-yellow;
+}
+
+/* todos */
+.btn-add-todo {
+  @apply flexBetweenCenter
+}
+.btn-cancel-todo {
+  @apply absolute right-0 w-6 h-6
+}
+.input-todo {
+@apply bg-transparent focus:ring-0 text-sm w-full outline-none
+}
