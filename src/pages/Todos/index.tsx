@@ -5,7 +5,7 @@ import { useStoreApp } from "~/stores/useStoreApp";
 export default function index() {
   const { todos } = useStoreApp();
   return (
-    <div>
+    <div className="px-2">
       <ButtonBack />
       <Todos todos={todos} />
     </div>

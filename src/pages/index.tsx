@@ -47,7 +47,7 @@ export default function Index() {
       <div className="btn-add-container">
         <button className="btn-add-self">
           <Link to="/notes/new">
-            <IoMdAdd size={30} />
+            <IoMdAdd size={35} />
           </Link>
         </button>
       </div>

@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-
 import { useStoreApp } from "~/stores/useStoreApp";
 
 type TModal = {
@@ -41,7 +40,7 @@ const Modal = ({id, isActive, setIsActive }: TModal) => {
       {/* Modal Content */}
       {isActive && (
         <div className="bg-light0 text-dark0 shadow-lg w-1/2 rounded-lg p-3 z-50">
-          <p>Are you sure you want to delete this note?</p>
+          <p>Are you sure you want to delete this notes?</p>
 
           <div className="flexCenterCenter mt-5">
             <button

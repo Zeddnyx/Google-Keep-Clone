@@ -1,7 +1,7 @@
 
 export default function Navbar() {
   return (
-    <div className="flexBetweenCenter mb-3">
+    <div className="flexBetweenCenter">
 {/*       <div> */}
 {/*         <h1>Navbar</h1> */}
 {/*       </div> */}

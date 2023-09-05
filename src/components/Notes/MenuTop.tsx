@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import Modal from "~/components/Modal";
 
-export const MenuTop = ({ id,color }: { id: number, color: string }) => {
+export const MenuTop = ({ id, color }: { id: number; color: string }) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleDelete = () => {
@@ -11,8 +11,8 @@ export const MenuTop = ({ id,color }: { id: number, color: string }) => {
 
   return (
     <div className="relative cursor-pointer">
-      <button style={{ color: color }} onClick={() => handleDelete()}>
-          <CgClose size={20} />
+      <button style={{ color: color ? "#ebdbb2":"#cc214d" }} onClick={() => handleDelete()}>
+        <CgClose size={20} />
       </button>
       {isActive && (
         <Modal id={id} isActive={isActive} setIsActive={setIsActive} />

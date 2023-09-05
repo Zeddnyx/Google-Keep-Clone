@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import { IoMdAdd } from "react-icons/io";
-import {BsSquare} from "react-icons/bs"
+import { BsSquare } from "react-icons/bs";
+import { GrUpdate } from "react-icons/gr";
+import {RiSaveLine} from "react-icons/ri"
 
 import { useStoreApp } from "~/stores/useStoreApp";
 import { Checked } from "./Checked";
@@ -11,7 +13,8 @@ type TTodos = {
 };
 
 export default function Todos({ todos }: { todos: TTodos[] }) {
-  const { setTodos, editTodos, deleteTodos, setDoneTodos,doneTodos } = useStoreApp();
+  const { setTodos, editTodos, deleteTodos, setDoneTodos, doneTodos } =
+    useStoreApp();
   const [isAdd, setIsAdd] = useState(false);
   const [editId, setEditId] = useState<number | null>(null);
   const [editTitle, setEditTitle] = useState("");
@@ -54,32 +57,36 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
             <div key={todo.id} className="flex gap-5 w-full">
               {editId === todo.id ? (
                 <div className="flexColCenter w-full gap-2">
-                  <input
-                    placeholder="Change todo"
-                    type="text"
-                    value={editTitle}
-                    onChange={(e) => setEditTitle(e.target.value)}
-                    className="input-todo"
-                  />
-                  <button onClick={handleUpdate} className="btn-normal">
-                    Update
+                  <div className="flex gap-2">
+                    <button className="btn-done h-10">
+                      <BsSquare />
+                    </button>
+                    <input
+                      placeholder="Change todo"
+                      type="text"
+                      value={editTitle}
+                      onChange={(e) => setEditTitle(e.target.value)}
+                      className="input-todo"
+                    />
+                  </div>
+                  <button onClick={handleUpdate} className="btn-update-todo">
+                    <GrUpdate size={15} /> Update item
                   </button>
                 </div>
               ) : (
                 <div className="w-full">
                   <div className="w-full flex items-center gap-2">
                     {/* action todos */}
-                      <button
-                        onClick={() => handleDone(todo)}
-                        className="btn-done h-10"
-                      >
+                    <button
+                      onClick={() => handleDone(todo)}
+                      className="btn-done h-10"
+                    >
                       <BsSquare />
-                      </button>
+                    </button>
                     {/* shows todos */}
                     <span onClick={() => handleEdit(todo.id, todo.title)}>
                       <p>{todo.title}</p>
                     </span>
-
                   </div>
                 </div>
               )}
@@ -88,7 +95,10 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
         </div>
         {isAdd ? (
           <div className="flexColCenter gap-2 w-full">
-            <div className="relative w-full">
+            <div className="relative w-full flex gap-2">
+              <button>
+                <BsSquare />
+              </button>
               <input
                 placeholder="Type your todo here..."
                 type="text"
@@ -101,8 +111,9 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
               </button>
             </div>
             <div className="flex w-full mt-2">
-              <button onClick={handleAddTodo} className="btn-normal">
-                Add Todo
+              <button onClick={handleAddTodo} className="btn-add-todo">
+              <RiSaveLine />
+              Save item
               </button>
             </div>
           </div>

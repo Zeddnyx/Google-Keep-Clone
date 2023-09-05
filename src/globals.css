@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-light0 text-dark0 px-2;
+    @apply bg-light0 text-dark0
   }
   h2 {
     @apply text-lg md:text-xl font-bold capitalize;
@@ -44,7 +44,7 @@
 
 /* homepage */
 .container {
-  @apply h-full w-full mx-auto mt-10 grid gap-2 grid-cols-2 md:grid-cols-3 place-content-center grid-flow-row-dense;
+  @apply h-full w-full mx-auto mt-10 px-2 grid gap-2 grid-cols-2 md:grid-cols-3 place-content-center grid-flow-row-dense;
 }
 .todos-contaier {
   @apply grid p-2 border border-dark0 rounded-md max-h-36 overflow-y-auto overflow-hidden;
@@ -59,7 +59,7 @@
   @apply w-full flex justify-end mt-5 relative;
 }
 .btn-add-self {
-  @apply transition-all ease-in  h-12 w-12 md:h-14 md:w-14 bg-light0 rounded-md flex justify-center items-center text-dark0 fixed right-5 bottom-10 shadow-lg
+  @apply transition-all ease-in  h-14 w-14 md:h-16 md:w-16 bg-light0 rounded-md flex justify-center items-center text-dark0 fixed right-5 bottom-20 shadow-lg
   hover:rotate-90  hover:text-yellow;
 }
 
@@ -78,10 +78,13 @@
 
 /* todos */
 .btn-add-todo {
-  @apply flexBetweenCenter
+  @apply flex items-center gap-2 mt-1
 }
 .btn-cancel-todo {
   @apply absolute right-0 w-6 h-6
+}
+.btn-update-todo {
+  @apply flex gap-2 items-center
 }
 .input-todo {
 @apply bg-transparent focus:ring-0 text-sm w-full outline-none

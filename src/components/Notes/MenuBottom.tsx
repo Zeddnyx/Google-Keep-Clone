@@ -1,18 +1,18 @@
-import { AiOutlineCheck } from "react-icons/ai";
-
 interface MenuBottomProps {
+  bg: string;
   setColor: (color: string) => void;
   select: string;
   handleSave: () => void;
 }
 
 export const MenuBottom: React.FC<MenuBottomProps> = ({
+  bg,
   setColor,
   select,
   handleSave,
 }) => {
   return (
-    <div className="menu-bottom">
+    <div className="menu-bottom" style={{ backgroundColor: bg }}>
       <div className="flex gap-2 items-center">
         {color.map((color, i) => (
           <button
@@ -25,10 +25,10 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({
         ))}
       </div>
       <button
-        className="btn-saved"
+        className={bg ? "text-light0" : "text-dark0"}
         onClick={handleSave}
       >
-        <AiOutlineCheck size={25} />
+        Save
       </button>
     </div>
   );

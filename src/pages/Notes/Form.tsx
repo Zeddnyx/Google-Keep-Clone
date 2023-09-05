@@ -24,12 +24,12 @@ export default function Form({
     <div
       style={{
         backgroundColor: bgColor,
-        padding: "1rem",
+        padding: "0.5rem",
         color: bgColor ? "#ebdbb2" : "#282828",
       }}
     >
       <ButtonBack />
-      <div>
+      <>
         <div className="flexBetweenCenter w-full">
           <Input
             type="text"
@@ -44,7 +44,7 @@ export default function Form({
           {title && <MenuTop id={input.id} color={bgColor} />}
         </div>
         <textarea
-          className="w-full h-[30rem] max-h-2xl p-1 outline-none focus:ring-0 bg-transparent"
+          className="w-full h-screen max-h-2xl p-1 outline-none focus:ring-0 bg-transparent"
           placeholder="Content"
           value={body}
           onChange={(e) => {
@@ -53,6 +53,7 @@ export default function Form({
         ></textarea>
         <div className="flexBetweenCenter">
           <MenuBottom
+            bg={bgColor}
             select={bgColor}
             setColor={(e) => {
               setInput({ ...input, bgColor: e });
@@ -60,7 +61,7 @@ export default function Form({
             handleSave={() => handleClick()}
           />
         </div>
-      </div>
+      </>
     </div>
   );
 }
