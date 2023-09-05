@@ -16,7 +16,7 @@ const useStore = create(
       },
       deleteTodos: (id: number) => {
         set((state: any) => ({
-          doneTodos: state.todos.filter((todo: TTodo) => todo?.id !== id),
+          todos: state.todos.filter((todo: TTodo) => todo?.id !== id),
         }));
       },
       editTodos: (id: number, newTitle: string) => {
