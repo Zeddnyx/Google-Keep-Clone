@@ -32,6 +32,11 @@ const useStore = create(
           doneTodos: [...state.doneTodos, { id, title }],
         }));
       },
+      deleteDoneTodos: (id: number) => {
+        set((state: any) => ({
+          doneTodos: state.doneTodos.filter((todo: TTodo) => todo?.id !== id),
+        }));
+      },
 
       // notes
       notes: [],
@@ -72,6 +77,7 @@ export const useStoreApp = () => {
     editTodos,
     doneTodos,
     setDoneTodos,
+    deleteDoneTodos,
 
     notes,
     setNotes,
@@ -85,6 +91,7 @@ export const useStoreApp = () => {
       state.editTodos,
       state.doneTodos,
       state.setDoneTodos,
+      state.deleteDoneTodos,
 
       state.notes,
       state.setNotes,
@@ -100,6 +107,7 @@ export const useStoreApp = () => {
     editTodos,
     doneTodos,
     setDoneTodos,
+    deleteDoneTodos,
 
     notes,
     setNotes,

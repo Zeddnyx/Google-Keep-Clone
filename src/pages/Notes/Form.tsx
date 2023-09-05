@@ -28,7 +28,7 @@ export default function Form({
         color: bgColor ? "#ebdbb2" : "#282828",
       }}
     >
-      <ButtonBack />
+      <ButtonBack handleSave={handleClick} />
       <>
         <div className="flexBetweenCenter w-full">
           <Input
@@ -44,7 +44,7 @@ export default function Form({
           {title && <MenuTop id={input.id} color={bgColor} />}
         </div>
         <textarea
-          className="w-full h-screen max-h-2xl p-1 outline-none focus:ring-0 bg-transparent"
+          className="w-full h-screen max-h-2xl p-1 outline-none focus:ring-0 bg-transparent leading-relaxed"
           placeholder="Content"
           value={body}
           onChange={(e) => {

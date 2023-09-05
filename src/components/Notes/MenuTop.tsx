@@ -11,7 +11,7 @@ export const MenuTop = ({ id, color }: { id: number; color: string }) => {
 
   return (
     <div className="relative cursor-pointer">
-      <button style={{ color: color ? "#ebdbb2":"#cc214d" }} onClick={() => handleDelete()}>
+      <button style={{ color: color ? "#ebdbb2" : "#282828" }} onClick={() => handleDelete()}>
         <CgClose size={20} />
       </button>
       {isActive && (

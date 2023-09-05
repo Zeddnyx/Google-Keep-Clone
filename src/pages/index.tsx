@@ -28,9 +28,11 @@ export default function Index() {
             >
               <div className="flexBetweenCenter">
                 <Link to={`/notes/edit/${id}`}>
-                  <h2>{item.title}</h2>
+                  <div className="h-10 max-w-[136px] w-[136px] ">
+                    <h2 className="truncate">{item.title}</h2>
+                  </div>
                 </Link>
-                <MenuTop id={item.id} color={item.bg ? "#ebdbb2" : "#cc241d"} />
+                <MenuTop id={item.id} color={item.bg} />
               </div>
               <Link to={`/notes/edit/${id}`}>
                 <textarea

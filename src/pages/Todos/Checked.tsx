@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
 import { BsCheck2Square } from "react-icons/bs";
+import { CgClose } from "react-icons/cg";
+
+import { useStoreApp } from "~/stores/useStoreApp";
 
 interface IDone {
   title: string;
@@ -8,6 +11,7 @@ interface IDone {
 }
 
 export const Checked: React.FC<{ item: IDone[] }> = ({ item }) => {
+  const {deleteDoneTodos} = useStoreApp();
   const [isActive, setIsActive] = useState(false);
   typeof window != "undefined";
 
@@ -25,7 +29,7 @@ export const Checked: React.FC<{ item: IDone[] }> = ({ item }) => {
       </button>
 
       {isActive && (
-        <div className="flexColStart gap-2">
+        <div className="flexColStart gap-2 group">
           {item.map((item) => {
             return (
               <div key={item.id} className="flex items-center gap-2 ">
@@ -33,6 +37,7 @@ export const Checked: React.FC<{ item: IDone[] }> = ({ item }) => {
                   <BsCheck2Square />
                 </span>
                 <p className="line-through text-light3">{item.title}</p>
+                <span className="hidden group-hover:block group-hover:focus:block" onClick={() => deleteDoneTodos(item.id)}><CgClose /></span>
               </div>
             );
           })}

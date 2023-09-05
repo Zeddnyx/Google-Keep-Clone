@@ -2,8 +2,8 @@ import { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import { IoMdAdd } from "react-icons/io";
 import { BsSquare } from "react-icons/bs";
-import { GrUpdate } from "react-icons/gr";
-import {RiSaveLine} from "react-icons/ri"
+import {RxUpdate} from "react-icons/rx"
+import { RiSaveLine } from "react-icons/ri";
 
 import { useStoreApp } from "~/stores/useStoreApp";
 import { Checked } from "./Checked";
@@ -70,7 +70,7 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
                     />
                   </div>
                   <button onClick={handleUpdate} className="btn-update-todo">
-                    <GrUpdate size={15} /> Update item
+                    <RxUpdate size={15} /> Update item
                   </button>
                 </div>
               ) : (
@@ -112,8 +112,8 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
             </div>
             <div className="flex w-full mt-2">
               <button onClick={handleAddTodo} className="btn-add-todo">
-              <RiSaveLine />
-              Save item
+                <RiSaveLine />
+                Save item
               </button>
             </div>
           </div>
