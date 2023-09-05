@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
-import { CgClose } from "react-icons/cg";
 import { BsCheck2Square } from "react-icons/bs";
-
-import { useStoreApp } from "~/stores/useStoreApp";
 
 interface IDone {
   title: string;
@@ -11,7 +8,6 @@ interface IDone {
 }
 
 export const Checked: React.FC<{ item: IDone[] }> = ({ item }) => {
-  const { deleteTodos } = useStoreApp();
   const [isActive, setIsActive] = useState(false);
   typeof window != "undefined";
 
@@ -37,9 +33,6 @@ export const Checked: React.FC<{ item: IDone[] }> = ({ item }) => {
                   <BsCheck2Square />
                 </span>
                 <p className="line-through text-light3">{item.title}</p>
-                <span onClick={() => deleteTodos(item.id)}>
-                  <CgClose />
-                </span>
               </div>
             );
           })}
