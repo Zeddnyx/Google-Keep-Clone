@@ -9,7 +9,7 @@ export default function Index() {
   const { notes, todos } = useStoreApp();
 
   return (
-    <>
+    <div className="relative min-h-screen">
       <Navbar />
       <div className="container-home bg-light0 dark:bg-dark0">
         <div className="todos-contaier dark:border-light0">
@@ -58,6 +58,6 @@ export default function Index() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -6,10 +6,10 @@
   html {
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
-    height: 100%;
   }
   body {
-    @apply bg-light0 text-dark0
+    @apply bg-light0 text-dark0 dark:bg-dark0 dark:text-light0
+
   }
   h2 {
     @apply text-lg md:text-xl font-bold capitalize;
@@ -39,7 +39,7 @@
 
 /* homepage */
 .container-home {
-  @apply h-screen w-full mx-auto px-2 pb-2 grid gap-2 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 place-content-center 
+  @apply h-full w-full mx-auto px-2 pb-2 grid gap-2 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 place-content-center 
 }
 .todos-contaier {
   @apply grid p-2 border border-dark0 rounded-md max-h-44 h-44 overflow-y-auto overflow-hidden;
@@ -54,8 +54,10 @@
   @apply w-full flex justify-end mt-5 relative;
 }
 .btn-add-self {
-  @apply transition-all ease-in  h-14 w-14 md:h-16 md:w-16 bg-light0 dark:bg-dark0 text-dark0 dark:text-light0 rounded-md flex justify-center items-center text-dark0 fixed right-5 bottom-20 shadow-lg
-  hover:rotate-90  hover:text-yellow;
+  @apply transition-all ease-in  h-14 w-14 md:h-16 md:w-16 bg-light0 dark:bg-dark0 text-dark0 dark:text-light0 
+  rounded-md flex justify-center items-center text-dark0 
+  fixed right-5 bottom-20 shadow-lg
+  hover:rotate-90  hover:text-yellow dark:hover:text-yellow;
 }
 
 /* notes  */
