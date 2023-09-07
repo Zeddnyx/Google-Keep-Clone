@@ -10,7 +10,11 @@ export default function index() {
     navigate("/");
   }
   return (
+<<<<<<< HEAD
     <div className="px-2">
+=======
+    <div className="px-2 dark:bg-dark0 h-screen">
+>>>>>>> f8ab00a (feat: dark mode, ui: add dark mode style)
       <ButtonBack handleSave={handleBack} />
       <Todos todos={todos} />
     </div>

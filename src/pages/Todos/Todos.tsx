@@ -49,7 +49,7 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
   };
 
   return (
-    <div className="grid gap-2">
+    <div className="grid gap-2 dark:bg-dark0 dark:text-light0">
       <h2>todo list</h2>
       <div className="flexColStart">
         <div className="w-full">

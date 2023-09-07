@@ -12,7 +12,7 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({
   handleSave,
 }) => {
   return (
-    <div className="menu-bottom" style={{ backgroundColor: bg }}>
+    <div className="menu-bottom bg-light0 dark:bg-dark0" style={{ backgroundColor: bg }}>
       <div className="flex gap-2 items-center">
         {color.map((color, i) => (
           <button
@@ -25,7 +25,7 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({
         ))}
       </div>
       <button
-        className={bg ? "text-light0" : "text-dark0"}
+        className={bg ? "text-light0 " : "text-dark0 dark:text-light0"}
         onClick={handleSave}
       >
         Save

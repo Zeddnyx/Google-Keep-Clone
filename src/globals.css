@@ -6,6 +6,7 @@
   html {
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
+    height: 100%;
   }
   body {
     @apply bg-light0 text-dark0
@@ -21,12 +22,6 @@
   }
 }
 
-.dark {
-  @apply bg-dark0 text-light0;
-}
-.dark-border {
-  @apply border border-light0;
-}
 
 /* global style */
 .flexCenterCenter {
@@ -43,8 +38,8 @@
 }
 
 /* homepage */
-.container {
-  @apply h-full w-full mx-auto mt-10 px-2 grid gap-2 grid-cols-2 md:grid-cols-3 place-content-center grid-flow-row-dense;
+.container-home {
+  @apply h-full w-full mx-auto px-2 py-2 grid gap-2 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 place-content-center grid-flow-row-dense;
 }
 .todos-contaier {
   @apply grid p-2 border border-dark0 rounded-md max-h-44 h-44 overflow-y-auto overflow-hidden;
@@ -53,19 +48,19 @@
   @apply p-1 grid 
 }
 .notes-item {
-  @apply p-2 rounded-md grid gap-3 
+  @apply p-2 rounded-md grid gap-3 w-full h-44 aspect-video border
 }
 .btn-add-container {
   @apply w-full flex justify-end mt-5 relative;
 }
 .btn-add-self {
-  @apply transition-all ease-in  h-14 w-14 md:h-16 md:w-16 bg-light0 rounded-md flex justify-center items-center text-dark0 fixed right-5 bottom-20 shadow-lg
+  @apply transition-all ease-in  h-14 w-14 md:h-16 md:w-16 bg-light0 dark:bg-dark0 text-dark0 dark:text-light0 rounded-md flex justify-center items-center text-dark0 fixed right-5 bottom-20 shadow-lg
   hover:rotate-90  hover:text-yellow;
 }
 
 /* notes  */
 .menu-bottom {
-  @apply flexBetweenCenter w-full p-2 fixed bottom-0 left-0 bg-light0;
+  @apply flexBetweenCenter w-full p-2 fixed bottom-0 left-0  z-50
 }
 .menu-bottom-colors {
   @apply w-7 h-7 border rounded-full cursor-pointer hover:opacity-100  outline-none;

@@ -22,15 +22,12 @@ export default function Form({
 }: TForm) {
   return (
     <div
-      style={{
-        backgroundColor: bgColor,
-        padding: "0.5rem",
-        color: bgColor ? "#ebdbb2" : "#282828",
-      }}
+    className={bgColor ? "p-2 text-light0" : "dark:bg-dark0 dark:text-light0 p-2"}
+    style={{ backgroundColor: bgColor }}
     >
       <ButtonBack handleSave={handleClick} />
       <>
-        <div className="flexBetweenCenter w-full">
+        <div className="flexBetweenCenter w-full ">
           <Input
             type="text"
             placeholder="Title"

@@ -6,6 +6,10 @@ import { TStore, TTodo, TNote } from "./types";
 const useStore = create(
   persist<TStore>(
     (set) => ({
+      isDark: false,
+      setIsDark: () => {
+        set((state: any) => ({ isDark: !state.isDark }));
+      },
 
       // todos
       todos: [],
@@ -71,6 +75,9 @@ const useStore = create(
 
 export const useStoreApp = () => {
   const [
+    isDark,
+    setIsDark,
+
     todos,
     setTodos,
     deleteTodos,
@@ -85,6 +92,9 @@ export const useStoreApp = () => {
     deleteNotes,
   ] = useStore((state) => {
     return [
+      state.isDark,
+      state.setIsDark,
+
       state.todos,
       state.setTodos,
       state.deleteTodos,
@@ -101,6 +111,9 @@ export const useStoreApp = () => {
   }, shallow);
 
   return {
+    isDark,
+    setIsDark,
+
     todos,
     setTodos,
     deleteTodos,

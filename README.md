@@ -1,6 +1,21 @@
 # Google keep Clone
 
-## TODO
-- add form reusable for notes
-- add menuBottm for notes
+## Tech
+- NodeJS
+- TypeScript
+- React
+- Zustand
+- React Icons
 
+
+## Features
+- Notes
+- Tasks
+- Custome Color Notes
+- Dark Mode
+
+
+## TODO
+- add custome labels notes
+- search notes
+- drag and drop notes
