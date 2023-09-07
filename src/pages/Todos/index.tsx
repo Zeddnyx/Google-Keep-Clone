@@ -11,7 +11,11 @@ export default function index() {
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="px-2">
+=======
+    <div className="px-2 dark:bg-dark0 h-screen">
+>>>>>>> f8ab00a (feat: dark mode, ui: add dark mode style)
 =======
     <div className="px-2 dark:bg-dark0 h-screen">
 >>>>>>> f8ab00a (feat: dark mode, ui: add dark mode style)

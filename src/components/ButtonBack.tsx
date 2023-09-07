@@ -7,7 +7,11 @@ type TButtonBackProps = {
 export default function ButtonBack({handleSave}: TButtonBackProps) {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <button onClick={handleSave} className="my-6">
+=======
+    <button onClick={handleSave} className="my-6 text-dark dark:text-light0">
+>>>>>>> f8ab00a (feat: dark mode, ui: add dark mode style)
 =======
     <button onClick={handleSave} className="my-6 text-dark dark:text-light0">
 >>>>>>> f8ab00a (feat: dark mode, ui: add dark mode style)

@@ -10,6 +10,7 @@ export default function Index() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="container">
       <div className="todos-contaier">
         <Link to="/to-do">
@@ -53,12 +54,17 @@ export default function Index() {
           <Link to="/notes/new">
             <IoMdAdd size={35} />
 =======
+=======
+>>>>>>> f8ab00a (feat: dark mode, ui: add dark mode style)
     <>
       <Navbar />
       <div className="container-home bg-light0 dark:bg-dark0">
         <div className="todos-contaier dark:border-light0">
           <Link to="/to-do">
             <Todos todos={todos} />
+<<<<<<< HEAD
+>>>>>>> f8ab00a (feat: dark mode, ui: add dark mode style)
+=======
 >>>>>>> f8ab00a (feat: dark mode, ui: add dark mode style)
           </Link>
         </div>
