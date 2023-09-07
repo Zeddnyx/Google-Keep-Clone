@@ -20,7 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full dark:bg-dark0 py-2 flexBetweenCenter px-2">
+    <div className="w-full bg-transparent py-2 flexBetweenCenter px-2">
     <div>
       
     </div>
