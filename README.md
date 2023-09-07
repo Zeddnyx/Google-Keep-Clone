@@ -19,3 +19,6 @@
 - add custome labels notes
 - search notes
 - drag and drop notes
+
+## issues
+-
