@@ -39,7 +39,7 @@
 
 /* homepage */
 .container-home {
-  @apply h-full w-full mx-auto px-2 py-2 grid gap-2 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 place-content-center grid-flow-row-dense;
+  @apply h-screen w-full mx-auto px-2 pb-2 grid gap-2 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 place-content-center 
 }
 .todos-contaier {
   @apply grid p-2 border border-dark0 rounded-md max-h-44 h-44 overflow-y-auto overflow-hidden;
