@@ -35,7 +35,7 @@ export default function Navbar() {
           )}
         </div>
         <>
-          <a href="https://github.com/Zeddnyx">
+          <a href="https://github.com/Zeddnyx" target="_blank">
           <AiFillGithub className="text-2xl" />
           </a>
         </>
