@@ -11,13 +11,14 @@
 ## Features
 - Notes
 - Tasks
-- Custome Color Notes
-- Dark Mode
+- Custome color notes
+- Dark mode
+- Search filter
+- Change layout
 
 
 ## TODO
 - add custome labels notes
-- search notes
 - drag and drop notes
 
 ## issues
