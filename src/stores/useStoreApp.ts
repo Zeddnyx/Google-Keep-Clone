@@ -3,7 +3,7 @@ import { shallow } from "zustand/shallow";
 import { persist } from "zustand/middleware";
 import { TStore, TTodo, TNote } from "./types";
 
-const useStore = create(
+const useStores = create(
   persist<TStore>(
     (set) => ({
       isDark: false,
@@ -90,7 +90,7 @@ export const useStoreApp = () => {
     setNotes,
     editNotes,
     deleteNotes,
-  ] = useStore((state) => {
+  ] = useStores((state) => {
     return [
       state.isDark,
       state.setIsDark,

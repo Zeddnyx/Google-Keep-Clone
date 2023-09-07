@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { CgClose } from "react-icons/cg";
 import { IoMdAdd } from "react-icons/io";
-import { BsSquare } from "react-icons/bs";
-import {RxUpdate} from "react-icons/rx"
-import { RiSaveLine } from "react-icons/ri";
 
 import { useStoreApp } from "~/stores/useStoreApp";
+
 import { Checked } from "./Checked";
+import UpdateTodos from "./UpdateTodos";
+import AddTodos from "./AddTodos";
+import ShowTodos from "./ShowTodos";
 
 type TTodos = {
   title: string;
@@ -24,7 +24,8 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
     setEditTitle(title);
   };
 
-  const handleUpdate = () => {
+  const handleUpdate = (e: any) => {
+    e.preventDefault();
     if (editId !== null) {
       editTodos(editId, editTitle);
       setEditId(null);
@@ -32,14 +33,15 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
     }
   };
 
-  const handleAddTodo = () => {
+  const handleAddTodos = () => {
     setIsAdd((prev) => !prev);
     if (!!editTitle) {
       setTodos(editTitle);
       setEditTitle("");
     }
   };
-  const handleAdd = () => {
+  const handleAdd = (e: any) => {
+    e.preventDefault();
     setIsAdd((prev) => !prev);
   };
 
@@ -56,69 +58,30 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
           {todos.map((todo: any) => (
             <div key={todo.id} className="flex gap-5 w-full">
               {editId === todo.id ? (
-                <div className="flexColCenter w-full gap-2">
-                  <div className="flex gap-2">
-                    <button className="btn-done h-10">
-                      <BsSquare />
-                    </button>
-                    <input
-                      placeholder="Change todo"
-                      type="text"
-                      value={editTitle}
-                      onChange={(e) => setEditTitle(e.target.value)}
-                      className="input-todo"
-                    />
-                  </div>
-                  <button onClick={handleUpdate} className="btn-update-todo">
-                    <RxUpdate size={15} /> Update item
-                  </button>
-                </div>
+                <UpdateTodos
+                  editTitle={editTitle}
+                  setEditTitle={setEditTitle}
+                  handleUpdate={handleUpdate}
+                />
               ) : (
-                <div className="w-full">
-                  <div className="w-full flex items-center gap-2">
-                    {/* action todos */}
-                    <button
-                      onClick={() => handleDone(todo)}
-                      className="btn-done h-10"
-                    >
-                      <BsSquare />
-                    </button>
-                    {/* shows todos */}
-                    <span onClick={() => handleEdit(todo.id, todo.title)}>
-                      <p>{todo.title}</p>
-                    </span>
-                  </div>
-                </div>
+                <ShowTodos
+                  todo={todo}
+                  handleDone={handleDone}
+                  handleEdit={handleEdit}
+                />
               )}
             </div>
           ))}
         </div>
         {isAdd ? (
-          <div className="flexColCenter gap-2 w-full">
-            <div className="relative w-full flex gap-2">
-              <button>
-                <BsSquare />
-              </button>
-              <input
-                placeholder="Type your todo here..."
-                type="text"
-                value={editTitle}
-                onChange={(e) => setEditTitle(e.target.value)}
-                className="input-todo"
-              />
-              <button onClick={handleAdd} className="btn-cancel-todo">
-                <CgClose />
-              </button>
-            </div>
-            <div className="flex w-full mt-2">
-              <button onClick={handleAddTodo} className="btn-add-todo">
-                <RiSaveLine />
-                Save item
-              </button>
-            </div>
-          </div>
+          <AddTodos
+            editTitle={editTitle}
+            setEditTitle={setEditTitle}
+            handleAdd={handleAdd}
+            handleAddTodos={handleAddTodos}
+          />
         ) : (
-          <button onClick={handleAddTodo} className="btn-add-todo">
+          <button onClick={handleAddTodos} className="btn-add-todo">
             <IoMdAdd /> List item
           </button>
         )}

@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar";
+import Header from "./Header";
 
 export const Layouts = () => {
   return (
     <main className="bg-light0 dark:bg-dark0">
-      <Navbar />
+      <Header />
       <Outlet />
     </main>
   );

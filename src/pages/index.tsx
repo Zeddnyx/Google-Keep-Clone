@@ -4,6 +4,7 @@ import { IoMdAdd } from "react-icons/io";
 import { MenuTop } from "~/components/Notes/MenuTop";
 import Todos from "./Todos/Todos";
 import Navbar from "./Navbar";
+import Animation from "~/components/Animation";
 
 export default function Index() {
   const { notes, todos } = useStoreApp();
@@ -21,32 +22,34 @@ export default function Index() {
         {notes
           .map((item, id) => {
             return (
-              <div
-                key={id}
-                className={`notes-item ${
-                  item.bg ? "text-light0 border-0" : "text-dark0 border-dark0 dark:text-light0 dark:border-light0"
-                } `}
-                style={{
-                  backgroundColor: item.bg,
-                }}
-              >
-                <div className="flexBetweenCenter">
+              <Animation key={id}>
+                <div
+                  className={`notes-item ${item.bg
+                      ? "text-light0 border-0"
+                      : "text-dark0 border-dark0 dark:text-light0 dark:border-light0"
+                    } `}
+                  style={{
+                    backgroundColor: item.bg,
+                  }}
+                >
+                  <div className="flexBetweenCenter">
+                    <Link to={`/notes/edit/${id}`}>
+                      <div className="h-10 max-w-[130px] w-[130px] lg:max-w-[200px] lg:w-[200px] ">
+                        <h2 className="truncate">{item.title}</h2>
+                      </div>
+                    </Link>
+                    <MenuTop id={item.id} color={item.bg} />
+                  </div>
                   <Link to={`/notes/edit/${id}`}>
-                    <div className="h-10 max-w-[130px] w-[130px] lg:max-w-[200px] lg:w-[200px] ">
-                      <h2 className="truncate">{item.title}</h2>
-                    </div>
+                    <textarea
+                      disabled
+                      className="textarea-body"
+                      value={item.body}
+                      style={{ resize: "none" }}
+                    ></textarea>
                   </Link>
-                  <MenuTop id={item.id} color={item.bg} />
                 </div>
-                <Link to={`/notes/edit/${id}`}>
-                  <textarea
-                    disabled
-                    className="textarea-body"
-                    value={item.body}
-                    style={{ resize: "none" }}
-                  ></textarea>
-                </Link>
-              </div>
+              </Animation>
             );
           })
           .reverse()}

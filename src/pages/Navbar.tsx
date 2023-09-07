@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { MdDarkMode } from "react-icons/md";
 import { PiLightbulbFilamentFill } from "react-icons/pi";
+import {AiFillGithub} from "react-icons/ai"
 
 import { useStoreApp } from "~/stores/useStoreApp";
 
@@ -22,7 +23,7 @@ export default function Navbar() {
   return (
     <div className="w-full bg-transparent py-3 flexBetweenCenter px-2">
       <div></div>
-      <div>
+      <div className="flexBetweenCenter w-20">
         <div
           onClick={() => handleTheme()}
           className="transition-all duration-300 ease-in-out"
@@ -33,6 +34,11 @@ export default function Navbar() {
             <MdDarkMode className="text-2xl" />
           )}
         </div>
+        <>
+          <a href="https://github.com/Zeddnyx">
+          <AiFillGithub className="text-2xl" />
+          </a>
+        </>
       </div>
     </div>
   );
