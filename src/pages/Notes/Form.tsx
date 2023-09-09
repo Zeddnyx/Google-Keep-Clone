@@ -2,7 +2,6 @@ import Animation from "~/components/Animation";
 import ButtonBack from "~/components/ButtonBack";
 import Input from "~/components/Input";
 import { MenuBottom } from "~/components/Notes/MenuBottom";
-import { MenuTop } from "~/components/Notes/MenuTop";
 
 type TForm = {
   title: string;
@@ -42,7 +41,6 @@ export default function Form({
               className="text-2xl font-bold"
             />
 
-            {title && <MenuTop id={input.id} color={bgColor} />}
           </div>
           <textarea
             className="w-full h-screen max-h-2xl p-1 outline-none focus:ring-0 bg-transparent leading-relaxed"

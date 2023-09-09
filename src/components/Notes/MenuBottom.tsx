@@ -1,3 +1,5 @@
+import { AiFillSave } from "react-icons/ai";
+
 interface MenuBottomProps {
   bg: string;
   setColor: (color: string) => void;
@@ -12,7 +14,10 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({
   handleSave,
 }) => {
   return (
-    <div className="menu-bottom bg-light0 dark:bg-dark0" style={{ backgroundColor: bg }}>
+    <div
+      className="menu-bottom bg-light0 dark:bg-dark0"
+      style={{ backgroundColor: bg }}
+    >
       <div className="flex gap-2 items-center">
         {color.map((color, i) => (
           <button
@@ -25,10 +30,10 @@ export const MenuBottom: React.FC<MenuBottomProps> = ({
         ))}
       </div>
       <button
-        className={bg ? "text-light0 " : "text-dark0 dark:text-light0"}
+        className={bg ? "text-light0 flexBetweenCenter" : "text-dark0 dark:text-light0 flexBetweenCenter"}
         onClick={handleSave}
       >
-        Save
+        <AiFillSave /> Save
       </button>
     </div>
   );

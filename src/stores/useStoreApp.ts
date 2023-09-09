@@ -30,7 +30,14 @@ const useStores = create(
           ),
         }));
       },
-      doneTodos: [],
+      doneTodos: [
+        {
+          id: 99,
+          title: "new feature",
+          body: "I change to markdown look, you can use Markdown tag like ## ### ``` and more. example: ## Test",
+          bg: "#83a598",
+        },
+      ],
       setDoneTodos: (title: string, id: number) => {
         set((state: any) => ({
           doneTodos: [...state.doneTodos, { id, title }],
