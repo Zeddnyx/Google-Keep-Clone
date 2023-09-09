@@ -18,8 +18,9 @@
 
 
 ## TODO
-- add custome labels notes
+- custome labels notes
 - drag and drop notes
+- pin notes
 
 ## issues
 -

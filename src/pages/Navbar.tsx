@@ -33,7 +33,7 @@ export default function Navbar({ isGrid, setIsGrid }: IProps) {
       <div className="flexBetweenCenter">
         {/*         Grid mode */}
         <button
-          className="text-dark0 dark:text-light0 animate"
+          className="text-dark0 dark:text-light0 animate hover:rotate-180 animate"
           onClick={() => setIsGrid(!isGrid)}
         >
           {isGrid ? (
