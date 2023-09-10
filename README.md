@@ -15,6 +15,7 @@
 - Dark mode
 - Search filter
 - Change layout
+- Edit and View Notes like Markdown
 
 
 ## TODO

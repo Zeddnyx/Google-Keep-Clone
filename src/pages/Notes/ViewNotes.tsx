@@ -8,7 +8,7 @@ import { MenuTop } from "~/components/Notes/MenuTop";
 export default function ViewNotes() {
   const { notes } = useStoreApp();
   const { id } = useParams();
-  const note = notes[Number(id)]; // get params and parse to number
+  const note = notes[Number(id)];
   const style = note.bg
     ? "text-light0 dark:text-light0"
     : "text-dark0 dark:text-light0 dark:bg-dark0";
@@ -24,7 +24,7 @@ export default function ViewNotes() {
     >
       <div className="flexBetweenCenter">
         <ButtonBack handleSave={handleBack} />
-        <MenuTop id={Number(id)} idEdit={Number(id)} color={note.bg} />
+        <MenuTop id={Number(note.id)} idEdit={Number(id)} color={note.bg} />
       </div>
       <h1>{note.title}</h1>
       <ReactMarkdown children={note.body}></ReactMarkdown>

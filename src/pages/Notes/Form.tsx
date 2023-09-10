@@ -24,7 +24,7 @@ export default function Form({
     <Animation>
       <div
         className={
-          bgColor ? "p-2 text-light0" : "dark:bg-dark0 dark:text-light0 p-2"
+          bgColor ? "p-2 text-light0 mb-5" : "dark:bg-dark0 dark:text-light0 p-2  mb-5"
         }
         style={{ backgroundColor: bgColor }}
       >

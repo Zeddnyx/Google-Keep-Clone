@@ -11,8 +11,12 @@ export type TNote = {
 };
 
 export type TStore = {
+  isGrid: boolean;
+  setIsGrid: (isGrid: boolean) => void;  
+
   isDark: boolean;
   setIsDark: (isDark: boolean) => void;
+
   todos: TTodo[];
   setTodos: (title: string) => void;
   deleteTodos: (id: number) => void;

@@ -7,13 +7,8 @@ import { CiGrid2V } from "react-icons/ci";
 
 import { useStoreApp } from "~/stores/useStoreApp";
 
-interface IProps {
-  isGrid: boolean;
-  setIsGrid: (isGrid: boolean) => void;
-}
-
-export default function Navbar({ isGrid, setIsGrid }: IProps) {
-  const { isDark, setIsDark } = useStoreApp();
+export default function Navbar() {
+  const { isDark, setIsDark, isGrid, setIsGrid } = useStoreApp();
 
   useEffect(() => {
     if (isDark) {

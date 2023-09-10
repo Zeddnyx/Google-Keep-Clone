@@ -16,7 +16,7 @@ export const MenuTop = ({
   const [isModal, setIsModal] = useState(false);
   const navigate = useNavigate();
 
-  const handleDelete = () => {
+  const handleModal = () => {
     setIsModal(true);
   };
 
@@ -30,7 +30,7 @@ export const MenuTop = ({
         <button onClick={() => navigate(`/notes/edit/${idEdit}`)}>
           <AiFillEdit size={20} />
         </button>
-        <button className={style} onClick={() => handleDelete()}>
+        <button className={style} onClick={() => handleModal()}>
           <CgClose size={20} />
         </button>
       </div>

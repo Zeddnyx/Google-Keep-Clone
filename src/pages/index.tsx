@@ -12,10 +12,9 @@ import Notes from "./Notes";
 import { useStoreApp } from "~/stores/useStoreApp";
 
 export default function Index() {
-  const { notes, todos } = useStoreApp();
+  const { notes, todos, isGrid } = useStoreApp();
 
   const [query, setQuery] = useState("");
-  const [isGrid, setIsGrid] = useState(false);
 
   const listFilter = notes.filter((val) => {
     if (query === "") return val;
@@ -28,7 +27,7 @@ export default function Index() {
     <div className="relative min-h-screen">
       <div className="flexBetweenCenter px-2 pb-2">
         <Search query={query} setQuery={setQuery} />
-        <Navbar isGrid={isGrid} setIsGrid={setIsGrid} />
+        <Navbar />
       </div>
       <div
         className={`container-home bg-light0 dark:bg-dark0 ${isGrid
