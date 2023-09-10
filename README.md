@@ -1,11 +1,9 @@
 # Google keep Clone
 
 ## Tech
-- NodeJS
 - TypeScript
 - React
 - Zustand
-- React Icons
 
 
 ## Features

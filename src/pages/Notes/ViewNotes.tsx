@@ -19,7 +19,7 @@ export default function ViewNotes() {
 
   return (
     <div
-      className={`p-2 px-4 min-h-screen space-y-2 ${style}`}
+      className={`p-2 px-4 w-full overflow-x-scroll min-h-screen space-y-2 ${style}`}
       style={{ backgroundColor: note.bg }}
     >
       <div className="flexBetweenCenter">
