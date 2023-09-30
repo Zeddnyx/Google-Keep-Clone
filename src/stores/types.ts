@@ -5,6 +5,7 @@ export type TTodo = {
 
 export type TNote = {
   id: number;
+  date: string | Date | number;
   title: string;
   body: string;
   bg: string;
@@ -26,7 +27,7 @@ export type TStore = {
   deleteDoneTodos: (id: number) => void;
 
   notes: TNote[];
-  setNotes: (title: string, body: string, bg: string) => void;
+  setNotes: (title: string, body: string, bg: string,date: string) => void;
   editNotes: (id: number, title: string, body: string, bg: string) => void;
   deleteNotes: (id: number) => void;
 };

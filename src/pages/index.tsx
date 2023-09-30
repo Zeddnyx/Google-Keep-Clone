@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdAdd } from "react-icons/io";
 
-import Search from "./Notes/Search";
-import Navbar from "./Navbar";
+import Search from "components/Layout/Search";
+import Navbar from "components/Layout/Navbar";
 
 import Todos from "./Todos/Todos";
 import Notes from "./Notes";

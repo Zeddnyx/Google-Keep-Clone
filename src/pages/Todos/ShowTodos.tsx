@@ -12,10 +12,10 @@ interface IShow {
 export default function ShowTodos({ todo, handleDone, handleEdit }: IShow) {
   return (
     <div className="w-full">
-      <div className="w-full flex items-center gap-2">
+      <div className="w-full flex items-center gap-5 cursor-pointer">
         {/* action todos */}
         <button onClick={() => handleDone(todo)} className="btn-done h-10">
-          <BsSquare />
+          <BsSquare size={20} />
         </button>
         {/* shows todos */}
         <span onClick={() => handleEdit(todo.id, todo.title)}>

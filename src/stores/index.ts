@@ -18,7 +18,7 @@ export const createStores = create(
       todos: [],
       setTodos: (title: any) => {
         set((state: any) => ({
-          todos: [...state.todos, { id: Date.now(), title }],
+          todos: [...state.todos, { id: Date.now(),date: new Date(),  title }],
         }));
       },
       deleteTodos: (id: number) => {

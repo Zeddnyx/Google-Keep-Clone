@@ -13,9 +13,9 @@ export default function UpdateTodos({
 }: IUpdate) {
   return (
     <form onSubmit={handleUpdate} className="flexColCenter w-full gap-2">
-      <div className="flex gap-2">
+      <div className="flex gap-5">
         <button className="btn-done h-10">
-          <BsSquare />
+          <BsSquare size={20} />
         </button>
         <input
           placeholder="Change todo"
@@ -26,7 +26,7 @@ export default function UpdateTodos({
         />
       </div>
       <button className="btn-update-todo">
-        <RxUpdate size={15} /> Update item
+        <RxUpdate size={20} /> Update item
       </button>
     </form>
   );

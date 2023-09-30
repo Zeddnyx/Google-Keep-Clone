@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 
 export default function index({ data }: any) {
+
   return (
     <>
       {data
@@ -13,10 +14,11 @@ export default function index({ data }: any) {
             <Animation key={id}>
               <Link to={`/notes/view/${id}`}>
                 <div
-                  className={`notes-item ${item.bg
+                  className={`notes-item ${
+                    item.bg
                       ? "text-light0 border-0"
                       : "text-dark0 border-dark0 dark:text-light0 dark:border-light0"
-                    } `}
+                  } `}
                   style={{
                     backgroundColor: item.bg,
                   }}

@@ -55,23 +55,25 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
       <h2>todo list</h2>
       <div className="flexColStart">
         <div className="w-full">
-          {todos.map((todo: any) => (
-            <div key={todo.id} className="flex gap-5 w-full">
-              {editId === todo.id ? (
-                <UpdateTodos
-                  editTitle={editTitle}
-                  setEditTitle={setEditTitle}
-                  handleUpdate={handleUpdate}
-                />
-              ) : (
-                <ShowTodos
-                  todo={todo}
-                  handleDone={handleDone}
-                  handleEdit={handleEdit}
-                />
-              )}
-            </div>
-          ))}
+          {todos.map((todo: any) => {
+            return (
+              <div key={todo.id} className="flex gap-5 w-full">
+                {editId === todo.id ? (
+                  <UpdateTodos
+                    editTitle={editTitle}
+                    setEditTitle={setEditTitle}
+                    handleUpdate={handleUpdate}
+                  />
+                ) : (
+                  <ShowTodos
+                    todo={todo}
+                    handleDone={handleDone}
+                    handleEdit={handleEdit}
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
         {isAdd ? (
           <AddTodos

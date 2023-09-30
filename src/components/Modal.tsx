@@ -38,7 +38,7 @@ const Modal = ({ id, isModal, setIsModal }: TModal) => {
 
       {/* Modal Content */}
       {isModal && id && (
-        <div className="bg-light0 text-dark0 shadow-lg w-1/3 rounded-lg p-3 z-50">
+        <div className="bg-light0 text-dark0 shadow-lg w-4/5 md:w-1/2 lg:w-1/3 rounded-lg p-3 z-50">
           <p>Are you sure you want to delete this notes?</p>
 
           <div className="flexCenterCenter mt-5">
