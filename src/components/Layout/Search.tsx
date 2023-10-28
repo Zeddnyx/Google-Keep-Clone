@@ -11,7 +11,7 @@ export default function Search({ query, setQuery }: ISearch) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search your notes"
-        className="bg-transparent w-full outline-none border border-dark0 dark:border-light0 rounded-full p-1 pl-2 text-dark0 dark:text-light0 text-sm"
+        className="bg-transparent w-full outline-none border border-dark0 dark:border-light0 rounded-lg p-1 pl-2 text-dark0 dark:text-light0 text-sm"
       />
     </form>
   );

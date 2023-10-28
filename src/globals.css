@@ -90,7 +90,7 @@
   @apply absolute right-0 w-6 h-6
 }
 .btn-update-todo {
-  @apply flex gap-5 items-center pb-4
+  @apply flex gap-5 items-center py-4
 }
 .input-todo {
 @apply bg-transparent focus:ring-0 text-sm w-full outline-none

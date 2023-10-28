@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useStoreApp } from "~/stores/useStoreApp";
-import Form from "./Form";
+import Form from "./NoteForm";
 
 export default function NewNotes() {
   const navigate = useNavigate();

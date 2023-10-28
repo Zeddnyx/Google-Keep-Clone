@@ -3,10 +3,10 @@ import { IoMdAdd } from "react-icons/io";
 
 import { useStoreApp } from "~/stores/useStoreApp";
 
-import { Checked } from "./Checked";
-import UpdateTodos from "./UpdateTodos";
-import AddTodos from "./AddTodos";
-import ShowTodos from "./ShowTodos";
+import TodoChecked from "./TodoChecked";
+import TodoUpdate from "./TodoUpdate";
+import TodoAdd from "./TodoAdd";
+import TodoShows from "./TodoShows";
 
 type TTodos = {
   title: string;
@@ -33,7 +33,7 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
     }
   };
 
-  const handleAddTodos = () => {
+  const handleTodoAdd = () => {
     setIsAdd((prev) => !prev);
     if (!!editTitle) {
       setTodos(editTitle);
@@ -59,13 +59,13 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
             return (
               <div key={todo.id} className="flex gap-5 w-full">
                 {editId === todo.id ? (
-                  <UpdateTodos
+                  <TodoUpdate
                     editTitle={editTitle}
                     setEditTitle={setEditTitle}
                     handleUpdate={handleUpdate}
                   />
                 ) : (
-                  <ShowTodos
+                  <TodoShows
                     todo={todo}
                     handleDone={handleDone}
                     handleEdit={handleEdit}
@@ -76,21 +76,21 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
           })}
         </div>
         {isAdd ? (
-          <AddTodos
+          <TodoAdd
             editTitle={editTitle}
             setEditTitle={setEditTitle}
             handleAdd={handleAdd}
-            handleAddTodos={handleAddTodos}
+            handleTodoAdd={handleAddTodos}
           />
         ) : (
-          <button onClick={handleAddTodos} className="btn-add-todo">
+          <button onClick={handleTodoAdd} className="btn-add-todo">
             <IoMdAdd /> List item
           </button>
         )}
 
         {/* Done todos */}
         <div className="flex justify-start w-full mt-5">
-          <Checked item={doneTodos} />
+          <TodoChecked item={doneTodos} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {  useParams } from "react-router-dom";
 
-import Form from "./Form";
+import Form from "./NoteForm";
 import { useStoreApp } from "~/stores/useStoreApp";
 
 export default function EditNotes() {

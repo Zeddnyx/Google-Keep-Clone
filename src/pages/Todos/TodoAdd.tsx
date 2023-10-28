@@ -12,9 +12,9 @@ interface IAdd {
 export default function AddTodos({handleAdd,editTitle,setEditTitle,handleAddTodos}:IAdd) {
   return (
     <div className="flexColCenter gap-2 w-full">
-      <form onSubmit={handleAdd} className="relative w-full flex gap-2">
+      <form onSubmit={handleAdd} className="relative w-full flex gap-5">
         <button>
-          <BsSquare />
+          <BsSquare size={20} />
         </button>
         <input
           placeholder="Type your todo here..."

@@ -10,7 +10,7 @@ interface IDone {
   id: number;
 }
 
-export const Checked: React.FC<{ item: IDone[] }> = ({ item }) => {
+export default function Checked({ item }:{ item: IDone[] }) {
   const {deleteDoneTodos} = useStoreApp();
   const [isActive, setIsActive] = useState(false);
   typeof window != "undefined";
