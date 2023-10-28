@@ -80,7 +80,7 @@ export default function Todos({ todos }: { todos: TTodos[] }) {
             editTitle={editTitle}
             setEditTitle={setEditTitle}
             handleAdd={handleAdd}
-            handleTodoAdd={handleAddTodos}
+            handleAddTodos={handleTodoAdd}
           />
         ) : (
           <button onClick={handleTodoAdd} className="btn-add-todo">
