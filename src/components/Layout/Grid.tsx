@@ -9,7 +9,7 @@ interface IGrid {
 export default function Grid({ isGrid, setIsGrid }: IGrid) {
   return (
     <button
-      className="text-dark0 dark:text-light0 animate hover:rotate-180 animate"
+      className="text-dark0 dark:text-light0 hover:rotate-180 animate"
       onClick={() => setIsGrid(!isGrid)}
     >
       {isGrid ? (

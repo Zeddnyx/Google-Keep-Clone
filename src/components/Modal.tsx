@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useStoreApp } from "~/stores/useStoreApp";
+import { slideInupAnimate } from "~/utils/animations";
 
 type TModal = {
   id: number;
@@ -31,14 +32,15 @@ const Modal = ({ id, isModal, setIsModal }: TModal) => {
     <div className="fixed inset-0 flexCenterCenter z-50">
       {/* Modal Overlay */}
       <div
-        className={`fixed inset-0 ${isModal ? "bg-black bg-opacity-50" : "bg-transparent"
-          }`}
+        className={`fixed inset-0 ${
+          isModal ? "bg-black bg-opacity-50" : "bg-transparent"
+        }`}
         onClick={handleOutsideClick}
       ></div>
 
       {/* Modal Content */}
       {isModal && id && (
-        <div className="bg-light0 text-dark0 shadow-lg w-4/5 md:w-1/2 lg:w-1/3 rounded-lg p-3 z-50">
+        <div className="bg-light0 text-dark0 shadow-lg w-4/5 md:w-1/2 lg:w-1/3 rounded-lg p-3 z-50" style={slideInupAnimate("100ms")}>
           <p>Are you sure you want to delete this notes?</p>
 
           <div className="flexCenterCenter mt-5">

@@ -7,7 +7,7 @@ import { useStoreApp } from "~/stores/useStoreApp";
 export default function EditNotes() {
   const { editNotes, notes } = useStoreApp();
   const { id } = useParams();
-  const note = notes[Number(id)];// get params and parse to number
+  const note = notes[Number(id)];
   const [notesEdit, setNotesEdit] = useState({
     title: note.title,
     body: note.body,
